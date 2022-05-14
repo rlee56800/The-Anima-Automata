@@ -6,11 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/NME1Justin.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/WinnerIsU.unity
     guid: ad3fa97bb1aab0349a0026ec361ca73c
+  - enabled: 1
+    path: Assets/Scenes/NME2Rebecca.unity
+    guid: 80fdb0ce7fae3d948988bbeeac9df088
+  - enabled: 1
+    path: Assets/Scenes/NME3Enzo.unity
+    guid: 1df19fad14effbc4b89f51c6702200ef
+  - enabled: 1
+    path: Assets/Scenes/NME4Kayte.unity
+    guid: 7641f76ddffe8af429bb043be8b2bb15
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9b650e320668b6c4890e3b8885324cf9, type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 1057b1a31b3ae3c4c9a56d4437323232, type: 2}

@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637868070926343388
+      ticks: 637881063448851866
     m_Hash: 614580499
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -94,6 +94,7 @@ m_ResolvedPackages:
     - 1.14.13
     - 1.14.15
     - 1.14.16
+    - 1.14.17
     - 1.15.1
     - 1.15.4
     - 1.15.7
@@ -102,6 +103,7 @@ m_ResolvedPackages:
     - 1.15.13
     - 1.15.15
     - 1.15.16
+    - 1.15.17
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -116,6 +118,7 @@ m_ResolvedPackages:
     - 1.15.13
     - 1.15.15
     - 1.15.16
+    - 1.15.17
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -126,7 +129,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 1.15.16
+    verified: 1.15.17
   dependencies:
   - name: com.unity.services.core
     version: 1.0.1
@@ -989,13 +992,15 @@ m_ResolvedPackages:
     - 1.7.5
     - 1.7.6
     - 1.7.7
+    - 1.7.8
     - 1.8.0-pre.1
     compatible:
     - 1.7.5
     - 1.7.6
     - 1.7.7
+    - 1.7.8
     - 1.8.0-pre.1
-    verified: 1.7.7
+    verified: 1.7.8
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -3521,6 +3526,7 @@ m_ResolvedPackages:
     - 1.2.0
     - 1.3.1
     - 1.3.2
+    - 1.4.0
     compatible:
     - 1.0.1
     - 1.1.0-pre.7
@@ -3533,6 +3539,7 @@ m_ResolvedPackages:
     - 1.2.0
     - 1.3.1
     - 1.3.2
+    - 1.4.0
     verified: 1.0.1
   dependencies:
   - name: com.unity.modules.unitywebrequest

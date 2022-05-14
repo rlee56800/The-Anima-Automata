@@ -15,6 +15,9 @@ public class writings : MonoBehaviour
     public Enemy enemy;
     public TextMeshPro boxText;
     public char prevAction = 'x';
+    public List<char> actions = new List<char>();
+    public List<char> displayedActions = new List<char>();
+    public string previousActions;
     // from Enemy:
     //  current state
     //  input
@@ -35,10 +38,17 @@ public class writings : MonoBehaviour
     {
        if(enemy.hasChanged)
        {
+           actions.Add(enemy.input);
+           if(actions.Count > 5)
+           {
+               actions.RemoveAt(0);
+           }
            enemy.hasChanged = false;
            boxText.text = "HINT\nCURRENT STATE: " + (enemy.currentState + 1) + 
                           "\nCURRENT ACTION: " + enemy.input + 
-                          "\nLAST ACTION: " + prevAction.ToString();
+                          "\nLAST ACTION: " + prevAction.ToString() + 
+                          "\nLAST 5 ACTIONS: " + string.Join(", ", actions);
+
            prevAction = enemy.input;
        }
     }

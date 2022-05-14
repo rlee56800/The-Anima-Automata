@@ -30,11 +30,14 @@ public abstract class Enemy : MonoBehaviour
 
     public Material shieldHitmat; // tetsubg
 
+    public SkinnedMeshRenderer frogMesh;
+
     // Start is called before the first frame update
     void Start()
     {
         //health = maxHealth;
         deathAnim = target.GetComponent<Animation>();
+        frogMesh.material = stMat;
     }
 
     // Update is called once per frame
@@ -48,13 +51,15 @@ public abstract class Enemy : MonoBehaviour
     {
         //target.GetComponent<MeshRenderer>().material = dmgMat;
 
-        if (collision.gameObject.CompareTag("Weapon"))
+        if (collision.gameObject.CompareTag("Weapon") && canHit == true) //sword hits enemy and they are not in iframes
         {
+            StartCoroutine(Invincibility(dmgMat));
             input = 'a';
             Debug.Log('a');
         } 
-        else if(collision.gameObject.CompareTag("Shield"))
+        else if(collision.gameObject.CompareTag("Shield") && canHit == true)
         {
+            StartCoroutine(Invincibility(dmgMat));
             input = 'b';
             Debug.Log('b');
         }
@@ -138,6 +143,8 @@ public abstract class Enemy : MonoBehaviour
             StartCoroutine(Invincibility(dmgMat));
         }
     }
+    */
+
 
     public IEnumerator Invincibility(Material mat)
     {
@@ -151,6 +158,7 @@ public abstract class Enemy : MonoBehaviour
         //}
         canHit = false;
 
+        /**
         target.GetComponent<MeshRenderer>().material = mat;
         yield return new WaitForSecondsRealtime(iFrames);
         target.GetComponent<MeshRenderer>().material = stMat;
@@ -159,11 +167,16 @@ public abstract class Enemy : MonoBehaviour
         yield return new WaitForSeconds(iFrames);
         target.GetComponent<MeshRenderer>().material = stMat;
         yield return new WaitForSeconds(iFrames);
+        */
 
+        frogMesh.material = mat;
+        yield return new WaitForSeconds(1);
+
+        frogMesh.material = stMat;
         canHit = true;
 
     }
-
+    /*
     public float DFACheck(char action, float index)
     {
         if(action.Equals(dfa[(int)index]))
